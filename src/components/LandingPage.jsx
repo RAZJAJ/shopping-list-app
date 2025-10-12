@@ -1,48 +1,63 @@
 import React from "react";
 
-const LandingPage = () => {
+export default function LandingPage() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
-      <div className="bg-gray-200 w-[320px] p-6 rounded-2xl shadow-md flex flex-col justify-between h-[520px] text-center">
+    <div className="min-h-screen bg-[#D9D9D9] flex items-center justify-center py-16 px-6">
+      {/* Main Container */}
+      <div className="bg-[#D9D9D9] rounded-3xl shadow-lg w-full max-w-md flex flex-col justify-between p-10 space-y-16">
         
-        
-        <div>
-          <h1 className="font-bold text-lg mb-2 uppercase text-gray-800">
-            SHOPPING LIST
-          </h1>
-          <h2 className="font-semibold text-sm mb-2 text-gray-700">
-            CLASSIFY YOUR SHOPPING EASILY
-          </h2>
-          <p className="text-sm text-gray-600 mb-4">
-            Add, edit, and check your shopping items from anywhere
-          </p>
+        {/* Header Section */}
+        <div className="space-y-10">
+          {/* Title */}
+          <div className="flex justify-center">
+            <h1 className="text-4xl font-bold text-black tracking-wide whitespace-nowrap">
+              SHOPPING LIST
+            </h1>
+          </div>
 
-          <button
-            className="bg-white text-gray-900 font-semibold px-5 py-2 rounded-full shadow hover:bg-gray-300 transition"
-          >
-            Get Started
-          </button>
+          {/* Sub Header & Description */}
+          <div className="text-4xl space-y-6 px-3">
+            <h2 className="text-lg font-semibold text-black/80 uppercase leading-relaxed">
+              Classify your <br /> shopping easily
+            </h2>
+            <p className="text-sm text-black/70 leading-relaxed">
+              Add, edit, and check your <br />
+              shopping items from <br />
+              anywhere. 
+            </p>
+          </div>
+
+          {/* Get Started Button */}
+          <div className="flex justify-center pt-6">
+            <button className="bg-white text-black font-semibold px-16 py-4 rounded-full shadow-md hover:bg-gray-100 transition">
+              Get Started
+            </button>
+          </div>
         </div>
 
-        
-        <div className="flex justify-between items-center mt-6 text-gray-700">
-          <div className="flex flex-col items-center">
-            <div className="bg-white rounded-full p-3 shadow mb-2">
-              <span className="text-xl">➕</span>
+        {/* Icons Section */}
+        <div className="flex justify-evenly items-center gap-16 mt-12">
+          {/* Add Item */}
+          <div className="flex flex-col items-center space-y-4">
+            <div className="bg-white rounded-full p-6 sm:p-8 shadow-lg">
+              <span className="text-3xl sm:text-4xl">➕</span>
             </div>
-            <p className="text-xs font-semibold">Add Items</p>
+            <span className="text-sm sm:text-base font-medium text-black/80">
+              Add Item
+            </span>
           </div>
 
-          <div className="flex flex-col items-center text-gray-400">
-            <div className="bg-white rounded-full p-3 shadow mb-2">
-              <span className="text-xl">🗑️</span>
+          {/* Delete Item */}
+          <div className="flex flex-col items-center space-y-4">
+            <div className="bg-white rounded-full p-6 sm:p-8 shadow-lg">
+              <span className="text-3xl sm:text-4xl">🗑️</span>
             </div>
-            <p className="text-xs font-semibold">Delete Item</p>
-          </div>
+            <span className="text-sm sm:text-base font-medium text-black/80">
+              Delete Item
+            </span>
+            </div>
         </div>
       </div>
     </div>
   );
-};
-
-export default LandingPage;
+}
