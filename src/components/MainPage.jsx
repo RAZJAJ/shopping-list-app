@@ -19,18 +19,18 @@ const MainPage = () => {
   return (
     <div className="min-h-screen bg-[#D9D9D9] flex flex-col items-center justify-center p-6">
       
-      <h1 className="text-4xl font-bold text-black mb-4">Shopping List</h1>
+      <h1 className="text-4xl font-bold text-black mb-4">SHOPPING LIST</h1>
 
       
       <img src={cartImage} alt="Cart" className="w-32 h-32 mb-6" />
 
       
-      <div className="flex flex-col items-center gap-4 mb-8">
+      <div className="flex flex-col items-center gap-2 mb-8">
         <input
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder="Enter item here..."
+          placeholder="Enter items here..."
           className="w-72 p-3 rounded-lg border border-gray-400 text-black focus:outline-none focus:ring-2 focus:ring-blue-400"
         />
 
