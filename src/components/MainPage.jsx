@@ -62,7 +62,7 @@ const MainPage = () => {
   if (isLoading) return <p>Loading...</p>;
 
   return (
-    <div className="min-h-screen bg-[#D9D9D9] flex flex-col items-center justify-center p-6">
+    <div className="min-h-screen w-screen bg-[#D9D9D9] flex flex-col items-center justify-center p-6 overflow-hidden">
       <h1 className="text-4xl font-bold text-black mb-4">Shopping List</h1>
 
       <img src={cartImage} alt="Cart" className="w-32 h-32 mb-6" />
@@ -73,7 +73,7 @@ const MainPage = () => {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder="Enter item here..."
-          className="w-72 p-3 rounded-lg border border-gray-400 text-black focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="w-72 p-3 rounded-lg border border-gray-400 text-black focus:outline-none focus:ring-2 focus:ring-blue-400 bg-white"
         />
         <button
           onClick={addItem}
@@ -82,8 +82,13 @@ const MainPage = () => {
           Add to Cart
         </button>
       </div>
+      
+      <p className="text-gray-600 text-sm mb-6">
+        To delete an item, just tap on it 
+      </p>
 
-      <div className="grid grid-cols-3 gap-2 w-full max-w-md justify-items-center">
+      
+      <div className="grid grid-cols-3 gap-x-[200px] gap-y-[20px] w-full max-w-[300px] justify-items-center">
         {items.length === 0 ? (
           <p className="col-span-3 text-gray-600 italic">No items yet</p>
         ) : (
