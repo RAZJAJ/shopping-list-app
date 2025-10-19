@@ -18,7 +18,7 @@
                Classify your <br /> shopping easily
              </h2>
              <p className="text-sm text-black/70 leading-relaxed">
-               Add, edit, and check your <br />
+               Add, and check your <br />
                shopping items from <br />
                anywhere.
              </p>
